@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="sw" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moduli ya Saba: Mfumo wa Taarifa | Pastot Aloyce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlue: '#0f172a',
+                        slateDark: '#1e293b',
+                        softCyan: '#22d3ee',
+                        tealCustom: '#14b8a6',
+                        mutedPurple: '#a78bfa',
+                        softWhite: '#f8fafc',
+                        offWhite: '#f1f5f9',
+                        darkSlate: '#334155'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Font Custom Styles */
+        .font-sans { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Merriweather', serif; }
+        .font-tnr { font-family: 'Times New Roman', Times, serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+
+        #progress-bar {
+            height: 4px;
+            background: linear-gradient(to right, #14b8a6, #a78bfa);
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: width 0.2s ease;
+        }
+
+        .step-locked {
+            filter: blur(4px) grayscale(1);
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .transition-all { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+
+<body class="bg-softWhite text-slate-800 dark:bg-deepBlue dark:text-slate-100 font-sans transition-colors duration-300" id="body-content">
+
+    <div id="progress-bar"></div>
+
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-deepBlue/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:text-tealCustom transition-all">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                <div class="flex gap-1 border-l pl-4 border-slate-300 dark:border-slate-700">
+                    <button onclick="changeFontSize(-2)" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-bold">A-</button>
+                    <button onclick="changeFontSize(2)" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-bold">A+</button>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <select onchange="updateFont(this.value)" class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-xs p-2 outline-none cursor-pointer">
+                    <option value="font-sans">Sans-Serif</option>
+                    <option value="font-serif">Serif</option>
+                    <option value="font-tnr">Times New Roman</option>
+                    <option value="font-mono">Monospace</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-4 inline-block bg-tealCustom/10 text-tealCustom px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
+                Disciples Community Church (DCC)
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Moduli ya Saba: <br><span class="text-tealCustom">Mfumo wa Utoaji wa Taarifa</span>
+            </h1>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-10 italic">
+                <span>✍️ Mwandishi: <strong>Pastot Aloyce</strong></span>
+                <span class="hidden md:inline">•</span>
+                <span>📅 30 Aprili, 2026</span>
+            </div>
+
+            <div class="aspect-video flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-[3rem] shadow-2xl text-9xl md:text-[10rem] border-8 border-white dark:border-slate-900">
+                <span>📋</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-24 space-y-12" id="article-text">
+        
+        <section>
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-4">
+                <span class="w-12 h-12 flex items-center justify-center bg-tealCustom text-white rounded-2xl shadow-lg">1</span>
+                Timothy kwenda kwa Mratibu wa CGN
+            </h2>
+            <div class="p-8 bg-white dark:bg-slate-800/40 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                <p class="text-lg leading-relaxed mb-6">
+                    Kazi ya Timothy si kufundisha tu, bali ni kutoa taarifa ya maendeleo ya mwanafunzi wake. Timothy anapokea fomu rasmi kutoka kwa mratibu wa <strong>Church Group Network (CGN)</strong>.
+                </p>
+                <div class="bg-tealCustom/5 p-4 rounded-xl italic mb-4 border-l-4 border-tealCustom">
+                    <strong>Maandiko:</strong> "Kila mtu na atoe habari za wakili wake; na hapo neno linalotakiwa katika mawakili, ni mtu aonekane kuwa mwaminifu." <strong>(1 Wakorintho 4:2)</strong>.
+                </div>
+                <blockquote class="p-4 border-l-4 border-mutedPurple font-serif italic text-slate-600 dark:text-slate-400">
+                    "Taarifa si mzigo wa karatasi, bali ni ushahidi wa uaminifu katika kile ulichokabidhiwa." — Hatua ya Uongozi.
+                </blockquote>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-4">
+                <span class="w-12 h-12 flex items-center justify-center bg-softCyan text-white rounded-2xl shadow-lg">2</span>
+                Mratibu wa CGN kwenda kwa Mratibu wa Zone
+            </h2>
+            <div class="p-8 bg-white dark:bg-slate-800/40 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                <p class="text-lg leading-relaxed mb-6">
+                    Mratibu wa CGN anakusanya fomu zote kutoka kwa ma-Timothy walio chini yake. Anazichambua na kutoa picha ya jumla ya hali ya vikundi vya mitaa kwenda kwa <strong>Mratibu wa Zone (Kanda)</strong>.
+                </p>
+                <div class="bg-softCyan/10 p-4 rounded-xl italic mb-4 border-l-4 border-softCyan">
+                    <strong>Maandiko:</strong> "Na mambo yale uliyoyasikia kwangu... hayo uwakabidhi watu waaminifu..." <strong>(2 Timotheo 2:2)</strong>.
+                </div>
+                <blockquote class="p-4 border-l-4 border-tealCustom font-serif italic text-slate-600 dark:text-slate-400">
+                    "Mawasiliano mazuri ni damu ya shirika lolote; yakisimama, mwili huanza kufa." — Peter Drucker.
+                </blockquote>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-4">
+                <span class="w-12 h-12 flex items-center justify-center bg-mutedPurple text-white rounded-2xl shadow-lg">3</span>
+                Mratibu wa Zone kwenda kwa Mchungaji
+            </h2>
+            <div class="p-8 bg-white dark:bg-slate-800/40 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                <p class="text-lg leading-relaxed mb-6">
+                    Mratibu wa Zone anawakilisha kanda nzima. Anatoa taarifa iliyosheheni takwimu na ushuhuda wa kanda yake kwa Mchungaji kiongozi.
+                </p>
+                <div class="bg-mutedPurple/10 p-4 rounded-xl italic mb-4 border-l-4 border-mutedPurple">
+                    <strong>Maandiko:</strong> "Watiini wenye kuwaongoza, na kuwanyenyekea; maana wao wanakesha kwa ajili ya roho zenu, kama watu watakaotoa hesabu..." <strong>(Waebrania 13:17)</strong>.
+                </div>
+                <blockquote class="p-4 border-l-4 border-slate-400 font-serif italic text-slate-600 dark:text-slate-400">
+                    "Kiongozi hawezi kuongoza kile asichokijua. Taarifa zinampa mchungaji macho ya kuona kila kondoo." — Anonymous.
+                </blockquote>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-4 text-orange-400">
+                <span class="w-12 h-12 flex items-center justify-center bg-orange-400 text-white rounded-2xl shadow-lg">4</span>
+                Tathmini na Ushirikishwaji (Evaluation)
+            </h2>
+            <div class="p-8 bg-white dark:bg-slate-800/40 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                <p class="text-lg leading-relaxed mb-6 text-african-vibe">
+                    Mchungaji hapokei taarifa na kuziweka kabatini; anazipitia, anafanya tathmini (Evaluation), na kisha anashirikisha viongozi kuhusu hatua za kuchukua.
+                </p>
+                <div class="bg-orange-400/10 p-4 rounded-xl italic mb-4 border-l-4 border-orange-400">
+                    <strong>Maandiko:</strong> "Kila neno na lithibitike kwa vinywa vya mashahidi wawili au watatu." <strong>(2 Wakorintho 13:1)</strong>.
+                </div>
+                <blockquote class="p-4 border-l-4 border-tealCustom font-serif italic text-slate-600 dark:text-slate-400">
+                    "Tathmini bila hatua ni kupoteza muda, lakini tathmini inayofanyiwa kazi huleta mageuzi." — John Maxwell.
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="overflow-hidden rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-xl">
+            <div class="bg-tealCustom p-6 text-white text-center font-bold text-xl">Muhtasari wa Mtiririko wa Taarifa</div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-slate-100 dark:bg-slate-800 text-xs font-black uppercase tracking-wider">
+                        <tr>
+                            <th class="p-5">Kutoka</th>
+                            <th class="p-5">Kwenda</th>
+                            <th class="p-5">Chombo cha Taarifa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+                            <td class="p-5 font-bold">Timothy</td>
+                            <td class="p-5">Mratibu wa CGN</td>
+                            <td class="p-5">Fomu ya TTD</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+                            <td class="p-5 font-bold">Mratibu wa CGN</td>
+                            <td class="p-5">Mratibu wa Zone</td>
+                            <td class="p-5">Ripoti ya Kikundi</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+                            <td class="p-5 font-bold">Mratibu wa Zone</td>
+                            <td class="p-5">Mchungaji</td>
+                            <td class="p-5">Ripoti ya Kanda</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-slate-100 dark:bg-slate-800/40 p-8 rounded-[2.5rem]">
+            <h3 class="text-2xl font-bold mb-6">Faida za Mfumo huu:</h3>
+            <ul class="space-y-4">
+                <li class="flex gap-4">
+                    <span class="text-tealCustom">✔</span>
+                    <strong>Uwazi (Transparency):</strong> Kila kiongozi anajua nini kinaendelea.
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-tealCustom">✔</span>
+                    <strong>Ulinzi (Protection):</strong> Ni rahisi kubaini kama kuna mafundisho potofu mapema.
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-tealCustom">✔</span>
+                    <strong>Ushirikiano (Synergy):</strong> Inajenga roho ya kufanya kazi kama timu moja.
+                </li>
+            </ul>
+        </section>
+
+        <div class="py-12 border-t border-slate-200 dark:border-slate-800 text-center">
+            <p class="text-xl font-bold mb-4 italic">"Utoaji wa taarifa ni ibada."</p>
+            <p class="opacity-70">Je, uko tayari kuingia kwenye utekelezaji wa mfumo huu?</p>
+        </div>
+    </main>
+
+    <section class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50" id="quiz-section">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Tathmini ya Uelewa (FAQ)</h2>
+                <p class="text-slate-500">Andika jibu lako kwanza, kisha ufungue kuona jibu la mwandishi.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <div class="bg-white dark:bg-slate-800 px-6 py-2 rounded-full shadow-sm text-sm font-bold border border-slate-200 dark:border-slate-700">
+                        Swali la: <span id="current-q-num" class="text-tealCustom">1</span>/10
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 px-6 py-2 rounded-full shadow-sm text-sm font-bold border border-slate-200 dark:border-slate-700">
+                        Kukamilika: <span id="quiz-percent" class="text-tealCustom">0</span>%
+                    </div>
+                </div>
+            </div>
+
+            <div id="quiz-holder" class="space-y-8"></div>
+
+            <div id="completion-card" class="hidden mt-16 p-12 bg-gradient-to-br from-tealCustom to-softCyan text-white rounded-[3rem] text-center shadow-2xl animate-bounce">
+                <h3 class="text-4xl font-bold mb-4">Hongera! 🏁</h3>
+                <p class="text-xl opacity-90">Umekamilisha Moduli ya Saba kwa nidhamu ya hali ya juu.</p>
+                <button onclick="location.reload()" class="mt-8 px-10 py-4 bg-white text-tealCustom rounded-2xl font-bold hover:scale-105 transition-all">Anza Upya</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-slate-200 dark:border-slate-800">
+        <p class="text-sm opacity-50 font-bold uppercase tracking-widest">© 2026 Pastot Aloyce | Timothy Discipleship Training</p>
+    </footer>
+
+    <script>
+        // 1. Theme Management
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('theme-icon').innerText = isDark ? '☀️' : '🌙';
+        }
+
+        // 2. Font Management
+        function updateFont(font) {
+            const body = document.getElementById('body-content');
+            body.classList.remove('font-sans', 'font-serif', 'font-tnr', 'font-mono');
+            body.classList.add(font);
+        }
+
+        // 3. Text Resizer
+        let currentSize = 18;
+        function changeFontSize(delta) {
+            currentSize += delta;
+            if(currentSize < 14) currentSize = 14;
+            if(currentSize > 28) currentSize = 28;
+            document.getElementById('article-text').style.fontSize = currentSize + 'px';
+        }
+
+        // 4. Progress Scroll
+        window.onscroll = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // 5. Quiz Logic & Data
+        const questions = [
+            { q: "Nini kazi ya Timothy ukiacha kufundisha?", a: "Ni kutoa taarifa ya maendeleo ya mwanafunzi wake kwa mratibu wa CGN." },
+            { q: "Timothy anatoa taarifa kwa nani?", a: "Kwa mratibu wa Church Group Network (CGN)." },
+            { q: "Mratibu wa CGN anapeleka ripoti kwa nani?", a: "Kwa Mratibu wa Zone (Kanda)." },
+            { q: "Ni nukuu gani inayosema mawasiliano ni damu ya shirika?", a: "Nukuu ya Peter Drucker inayosema yakisimama, mwili huanza kufa." },
+            { q: "Mchungaji anatumia taarifa kufanya nini?", a: "Anazipitia, anafanya tathmini (Evaluation), na kushirikisha hatua za kuchukua." },
+            { q: "Andiko gani linasisitiza uaminifu wa wakili?", a: "1 Wakorintho 4:2." },
+            { q: "Chombo cha taarifa kwa Mratibu wa Zone ni kipi?", a: "Ripoti ya Kanda." },
+            { q: "Nini faida ya uwazi (Transparency) katika mfumo huu?", a: "Kuhakikisha kila kiongozi anajua nini kinaendelea ndani ya kanisa." },
+            { q: "Utoaji wa taarifa unafananishwa na nini mwishoni mwa moduli?", a: "Unafananishwa na 'Ibada'." },
+            { q: "Ni chombo gani anachotumia Timothy kutoa ripoti?", a: "Fomu ya TTD." }
+        ];
+
+        let activeIdx = 0;
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-holder');
+            container.innerHTML = '';
+            
+            questions.forEach((q, idx) => {
+                const isLocked = idx > activeIdx;
+                const isCurrent = idx === activeIdx;
+                const isDone = idx < activeIdx;
+                
+                const card = document.createElement('div');
+                card.className = `p-8 rounded-[2.5rem] bg-white dark:bg-slate-800 transition-all duration-500 border border-slate-200 dark:border-slate-700 ${isLocked ? 'step-locked' : 'scale-100 opacity-100 shadow-xl'}`;
+                
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-6">
+                        <h4 class="text-xl font-bold">${idx + 1}. ${q.q}</h4>
+                        ${isDone ? '<span class="text-tealCustom text-2xl font-bold">✓</span>' : ''}
+                    </div>
+                    
+                    <div id="quiz-work-area-${idx}" class="${isDone ? 'hidden' : 'block'}">
+                        <textarea id="quiz-input-${idx}" placeholder="Andika jibu lako hapa..." class="w-full p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border-none outline-none ring-2 ring-transparent focus:ring-tealCustom min-h-[100px] mb-4 transition-all"></textarea>
+                        <button onclick="showAuthorAnswer(${idx})" class="bg-tealCustom text-white px-8 py-3 rounded-xl font-bold hover:shadow-lg active:scale-95 transition-all">Onyesha Jibu</button>
+                    </div>
+
+                    <div id="quiz-answer-${idx}" class="hidden mt-6 p-6 bg-tealCustom/5 border-t-4 border-tealCustom rounded-2xl animate-pulse">
+                        <p class="text-xs font-black text-tealCustom uppercase mb-2 tracking-widest">Jibu la Mwandishi:</p>
+                        <p class="text-lg font-medium opacity-90 italic">${q.a}</p>
+                        ${idx < questions.length - 1 ? `<button onclick="nextStep(${idx})" class="mt-6 px-6 py-2 bg-slate-900 dark:bg-white dark:text-slate-900 text-white rounded-xl text-sm font-bold">Endelea ➡️</button>` : `<button onclick="finishQuiz()" class="mt-6 px-6 py-2 bg-tealCustom text-white rounded-xl text-sm font-bold">Kamilisha 🏁</button>`}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            document.getElementById('current-q-num').innerText = activeIdx + 1;
+            document.getElementById('quiz-percent').innerText = Math.round((activeIdx / questions.length) * 100);
+        }
+
+        function showAuthorAnswer(idx) {
+            const inputVal = document.getElementById(`quiz-input-${idx}`).value;
+            if(inputVal.trim().length < 3) {
+                alert("Tafadhali andika jibu lako kwanza (Nidhamu ya uanafunzi).");
+                return;
+            }
+            document.getElementById(`quiz-answer-${idx}`).classList.remove('hidden');
+            document.getElementById(`quiz-work-area-${idx}`).classList.add('opacity-50', 'pointer-events-none');
+        }
+
+        function nextStep(idx) {
+            activeIdx++;
+            renderQuiz();
+            window.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+
+        function finishQuiz() {
+            document.getElementById('quiz-holder').classList.add('hidden');
+            document.getElementById('completion-card').classList.remove('hidden');
+            document.getElementById('quiz-percent').innerText = 100;
+        }
+
+        // Start
+        renderQuiz();
+
+    </script>
+</body>
+</html>
